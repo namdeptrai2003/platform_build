@@ -188,6 +188,7 @@ ifneq ($(CM_BUILD),)
     ifeq ($(all_product_configs),)
       # Fall back to cm.mk
       all_product_configs := $(shell find device -path "*/$(CM_BUILD)/cm.mk")
+    endif
   endif
 else
   ifneq ($(strip $(TARGET_BUILD_APPS)),)
