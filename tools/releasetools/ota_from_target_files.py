@@ -1046,9 +1046,6 @@ else if get_stage("%(bcb_dev)s") != "3/3" then
     else:
       include_full_boot = False
 
-      print("boot      target: %d  source: %d  diff: %d" % (
-          target_boot.size, source_boot.size, len(d)))
-
       common.ZipWriteStr(output_zip, "patch/boot.img.p", d)
 
       script.PatchCheck("%s:%s:%d:%s:%d:%s" %
@@ -1678,9 +1675,6 @@ else if get_stage("%(bcb_dev)s") != "3/3" then
       common.ZipWriteStr(output_zip, "boot.img", target_boot.data)
     else:
       include_full_boot = False
-
-      print( "boot      target: %d  source: %d  diff: %d" %
-        target_boot.size, source_boot.size, len(d))
 
       common.ZipWriteStr(output_zip, "patch/boot.img.p", d)
 
